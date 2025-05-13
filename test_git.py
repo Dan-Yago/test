@@ -11,7 +11,7 @@ df = pd.read_csv(file_path)
 poisk = df[(df['Min'] > 900) & (df['Squad']=='Manchester Utd')]
 
 #сюда пишем 
-stats=["Player","xG", "goals"]
+stats=["Player","xG", "Gls"]
 
 #Сюда пишем название столбцов в таблице если хотим поменять
 head=['Name','PSxG', 'PSxG +']
@@ -25,7 +25,6 @@ if not poisk.empty:
         temp=[]
         for i in range(len(stats)):
         	temp.append(row[stats[i]])        
-        print(temp)
         mas.append(temp)
         
 else:
